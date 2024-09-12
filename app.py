@@ -173,22 +173,22 @@ def process(input_image, prompt, prompt_neg='', input_elevation=0, input_num_ste
 
 _TITLE = '''LGM: Large Multi-View Gaussian Model for High-Resolution 3D Content Creation'''
 
-_DESCRIPTION = '''
-<div>
-<a style="display:inline-block" href="https://me.kiui.moe/lgm/"><img src='https://img.shields.io/badge/public_website-8A2BE2'></a>
-<a style="display:inline-block; margin-left: .5em" href="https://github.com/3DTopia/LGM"><img src='https://img.shields.io/github/stars/3DTopia/LGM?style=social'/></a>
-</div>
+# _DESCRIPTION = '''
+# <div>
+# <a style="display:inline-block" href="https://me.kiui.moe/lgm/"><img src='https://img.shields.io/badge/public_website-8A2BE2'></a>
+# <a style="display:inline-block; margin-left: .5em" href="https://github.com/3DTopia/LGM"><img src='https://img.shields.io/github/stars/3DTopia/LGM?style=social'/></a>
+# </div>
 
-* Input can be only text, only image, or both image and text. 
-* If you find the output unsatisfying, try using different seeds!
-'''
+# * Input can be only text, only image, or both image and text. 
+# * If you find the output unsatisfying, try using different seeds!
+# '''
 
 block = gr.Blocks(title=_TITLE).queue()
 with block:
     with gr.Row():
         with gr.Column(scale=1):
             gr.Markdown('# ' + _TITLE)
-    gr.Markdown(_DESCRIPTION)
+    # gr.Markdown(_DESCRIPTION)
     
     with gr.Row(variant='panel'):
         with gr.Column(scale=1):
@@ -246,4 +246,4 @@ with block:
         label='Text-to-3D Examples'
     )
     
-block.launch(server_name="0.0.0.0", share=False)
+block.launch(server_name="0.0.0.0", share=True)
